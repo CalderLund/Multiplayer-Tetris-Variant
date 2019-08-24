@@ -1,0 +1,6 @@
+1. One player wins
+2. One player eliminates a row with block elimination
+3. One player eliminates two rows with block elimination (could add commands to test for specialactions)
+4. One player eliminates four rows  with block elimination
+5. One player eliminates a row without block elimination
+6. One player special effects (blind)
