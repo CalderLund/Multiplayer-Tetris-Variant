@@ -13,11 +13,11 @@ Interpreter::Interpreter(long int seed, string seq1, string seq2, int startLvl, 
   currGame{nullptr}, seed{seed}, seq1{seq1}, seq2{seq2}, startLvl{startLvl}, textOnly{textOnly}, numPlayers{numPlayers}, maxLevel{maxLevel <= 0 ? 1 : maxLevel} {
 
     if (startLvl == 0 && numPlayers <= 2) {
-      currGame = new Game{numPlayers, seed, textOnly};
+      currGame = new Game{numPlayers, static_cast<int>(seed), textOnly};
       assignSeqFiles(currGame, seq1, seq2);
     }
     else {
-      currGame = new Game{numPlayers, seed, textOnly};
+      currGame = new Game{numPlayers, static_cast<int>(seed), textOnly};
 
       levelUpEveryone(currGame, startLvl);
     }
